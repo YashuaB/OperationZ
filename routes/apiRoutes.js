@@ -4,7 +4,7 @@ module.exports = function(app) {
   // Find all Authors and return them to the user with res.json
   app.get("/api/product/:category?", function(req, res) {
 
-    if(req.params.category === req.params.category){
+    if(req.params.category){
       db.Product.findAll({
         where: {
           id: req.params.category
