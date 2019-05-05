@@ -15,9 +15,8 @@ app.use(express.json());
 app.use(express.static("public"));
 
 
-require("./routes/")(app);
-require("./routes/")(app);
-require("./routes/")(app);
+require("./routes/apiRoutes")(app);
+
 
 
 db.sequelize.sync({ force: true }).then(function() {

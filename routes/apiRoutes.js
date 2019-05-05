@@ -2,18 +2,18 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Find all Authors and return them to the user with res.json
-  app.get("/api/review/:rating?", function(req, res) {
+  app.get("/api/product/:category?", function(req, res) {
 
-    if(req.params.rating === req.params.rating){
-      db.Review.findOne({
+    if(req.params.category === req.params.category){
+      db.Product.findAll({
         where: {
-          id: req.params.rating
+          id: req.params.category
         }
-      }).then(function(dbReview) {
-        res.json(dbReview);
+      }).then(function(dbProduct) {
+        res.json(dbProduct);
       });
-    }else{db.Review.findAll({}).then(function(dbReview) {
-      res.json(dbReview);
+    }else{db.Product.findAll({}).then(function(dbProduct) {
+      res.json(dbProduct);
     });}
     
   });
