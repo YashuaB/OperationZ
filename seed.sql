@@ -3,6 +3,6 @@ value("flamethrower", 200.99,"firearms","https://mondrian.mashable.com/uploads%2
 INSERT INTO products (name,price,category,image)
 value("machine gun", 50.99,"firearms", "https://lakemartinmachinegun.com/wp-content/uploads/2017/03/Colt-SMG.jpg")
 INSERT INTO products (name,price,category,image)
-value("machete", 9.99,"single handed weapon", "https://cdn.shopify.com/s/files/1/1054/1198/products/image_6fbd6c9e-7317-496b-92b6-ffd673c62720_2048x2048.jpg?v=1534880303" )
+value("machete", 9.99,"single-handed-weapon", "https://cdn.shopify.com/s/files/1/1054/1198/products/image_6fbd6c9e-7317-496b-92b6-ffd673c62720_2048x2048.jpg?v=1534880303" )
 INSERT INTO products (name,price,category,image)
-value("ninja star", 2.99,"single handed weapon","https://allninjagear.com/images/thumbs/0000470_vicious-spike-ninja-star_580.jpeg" )
+value("ninja star", 2.99,"single-handed-weapon","https://allninjagear.com/images/thumbs/0000470_vicious-spike-ninja-star_580.jpeg" )

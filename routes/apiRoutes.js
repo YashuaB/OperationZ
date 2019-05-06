@@ -5,15 +5,15 @@ module.exports = function(app) {
   app.get("/api/product/:category?", function(req, res) {
 
     if(req.params.category){
-      db.Product.findAll({
+      db.Products.findAll({
         where: {
-          id: req.params.category
+          category: req.params.category
         }
-      }).then(function(dbProduct) {
-        res.json(dbProduct);
+      }).then(function(dbProducts) {
+        res.json(dbProducts);
       });
-    }else{db.Product.findAll({}).then(function(dbProduct) {
-      res.json(dbProduct);
+    }else{db.Products.findAll({}).then(function(dbProducts) {
+      res.json(dbProducts);
     });}
     
   });
