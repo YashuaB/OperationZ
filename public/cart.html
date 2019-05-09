@@ -12,82 +12,446 @@
 
 <body>
 
-    <div class="container">
-        <div class="">
 
 
-
-
-
-
-
-            <div>
-                <footer class="page-footer font-small cyan darken-3">
-                    <!-- Footer Elements -->
-                    <div class="container">
-                        <!-- Grid row-->
-                        <div class="row">
-                            <!-- Grid column -->
-                            <div class="col-md-12 py-5">
-                                <div class="mb-5 flex-center">
-                                    <!-- Facebook -->
-                                    <a class="fb-ic">
-                                        <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                                    </a>
-                                    <!-- Twitter -->
-                                    <a class="tw-ic">
-                                        <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                                    </a>
-                                    <!-- Google +-->
-                                    <a class="gplus-ic">
-                                        <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                                    </a>
-                                    <!--Linkedin -->
-                                    <a class="li-ic">
-                                        <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                                    </a>
-                                    <!--Instagram-->
-                                    <a class="ins-ic">
-                                        <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                                    </a>
-                                    <!--Pinterest-->
-                                    <a class="pin-ic">
-                                        <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- Grid column -->
-                        </div>
-                        <!-- Grid row-->
-                    </div>
-                    <!-- Footer Elements -->
-                    <!-- Copyright -->
-                    <div class="footer-copyright text-center py-3">© 2019 Copyright:
-                        <a href="https://mdbootstrap.com/education/bootstrap/"> Team Monarch</a>
-                    </div>
-                    <!-- Copyright -->
-                </footer>
-                <!-- Footer -->
-                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-                    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-                    crossorigin="anonymous"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-                    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-                    crossorigin="anonymous"></script>
-                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-                    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-                    crossorigin="anonymous"></script>
+    <nav class="navbar navbar-default navbar-inverse no-corners">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img
+                        src="https://tangible.st.imagecentre.co.nz/static/img/tangible-logo.png"></a>
             </div>
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-                crossorigin="anonymous">
-                </script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-                crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-                crossorigin="anonymous"></script>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="nav navbar-nav navbar-right">
+                    <button type="button" class="btn btn-default btn-info navbar-btn">Login</button>
+                    <button type="button" data-cart-toggle class="btn btn-default navbar-btn">Cart <span class="badge"
+                            data-cart-item-count>2</span></button>
+                </div>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <div data-cart-products class="container">
+        <div class="row">
+            <div class="col-xs-4 col-md-3" data-cart-product>
+                <div class="thumbnail">
+                    <img data-image src="http://placehold.it/350x350" alt="thumbnail">
+                    <div class="caption">
+                        <h3>Dish</h3>
+                        <p>$24.99</p>
+                        <p><a href="#" class="btn btn-primary" data-cart-thumb="http://placehold.it/350x350"
+                                data-cart-name="Dish" data-cart-price="$24.99" data-cart-add="true" role="button">Add to
+                                cart</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4 col-md-3" data-cart-product>
+                <div class="thumbnail">
+                    <img data-image src="http://placehold.it/350x350" alt="thumbnail">
+                    <div class="caption">
+                        <h3>Dish</h3>
+                        <p>$24.99</p>
+                        <p><a href="#" class="btn btn-primary" data-cart-thumb="http://placehold.it/350x350"
+                                data-cart-name="Dish" data-cart-price="$24.99" data-cart-add="true" role="button">Add to
+                                cart</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4 col-md-3" data-cart-product>
+                <div class="thumbnail">
+                    <img data-image src="http://placehold.it/350x350" alt="thumbnail">
+                    <div class="caption">
+                        <h3>Dish</h3>
+                        <p>$24.99</p>
+                        <p><a href="#" class="btn btn-primary" data-cart-thumb="http://placehold.it/350x350"
+                                data-cart-name="Dish" data-cart-price="$24.99" data-cart-add="true" role="button">Add to
+                                cart</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4 col-md-3" data-cart-product>
+                <div class="thumbnail">
+                    <img data-image src="http://placehold.it/350x350" alt="thumbnail">
+                    <div class="caption">
+                        <h3>Dish</h3>
+                        <p>$24.99</p>
+                        <p><a href="#" class="btn btn-primary" data-cart-thumb="http://placehold.it/350x350"
+                                data-cart-name="Dish" data-cart-price="$24.99" data-cart-add="true" role="button">Add to
+                                cart</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4 col-md-3" data-cart-product>
+                <div class="thumbnail">
+                    <img data-image src="http://placehold.it/350x350" alt="thumbnail">
+                    <div class="caption">
+                        <h3>Dish</h3>
+                        <p>$24.99</p>
+                        <p><a href="#" class="btn btn-primary" data-cart-thumb="http://placehold.it/350x350"
+                                data-cart-name="Dish" data-cart-price="$24.99" data-cart-add="true" role="button">Add to
+                                cart</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4 col-md-3" data-cart-product>
+                <div class="thumbnail">
+                    <img data-image src="http://placehold.it/350x350" alt="thumbnail">
+                    <div class="caption">
+                        <h3>Dish</h3>
+                        <p>$24.99</p>
+                        <p><a href="#" class="btn btn-primary" data-cart-thumb="http://placehold.it/350x350"
+                                data-cart-name="Dish" data-cart-price="$24.99" data-cart-add="true" role="button">Add to
+                                cart</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4 col-md-3" data-cart-product>
+                <div class="thumbnail">
+                    <img data-image src="http://placehold.it/350x350" alt="thumbnail">
+                    <div class="caption">
+                        <h3>Dish</h3>
+                        <p>$24.99</p>
+                        <p><a href="#" class="btn btn-primary" data-cart-thumb="http://placehold.it/350x350"
+                                data-cart-name="Dish" data-cart-price="$24.99" data-cart-add="true" role="button">Add to
+                                cart</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4 col-md-3" data-cart-product>
+                <div class="thumbnail">
+                    <img data-image src="http://placehold.it/350x350" alt="thumbnail">
+                    <div class="caption">
+                        <h3>Dish</h3>
+                        <p>$24.99</p>
+                        <p><a href="#" class="btn btn-primary" data-cart-thumb="http://placehold.it/350x350"
+                                data-cart-name="Dish" data-cart-price="$24.99" data-cart-add="true" role="button">Add to
+                                cart</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div data-cart class="cart panel panel-primary no-corners expanded">
+        <div class="panel-heading no-corners">
+            <h3>Your cart</h3>
+        </div>
+        <div data-cart-items-container class="panel-body">
+            <div data-cart-item class="cart-item row template">
+                <div class="col-md-6">
+                    <div class="thumbnail">
+                        <img data-cart-thumb src="" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4 data-cart-name></h4>
+                    <h5 data-cart-price></h5>
+                    <button class="btn btn-warning" data-cart-remove>Remove</button>
+                </div>
+            </div>
+
+            <div data-cart-item class="cart-item row">
+                <div class="col-md-6">
+                    <div class="thumbnail">
+                        <img src="http://placehold.it/350x350" alt="thumbnail">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4>Dish</h4>
+                    <h5>$24.99</h5>
+                    <button class="btn btn-warning" data-cart-remove>Remove</button>
+                </div>
+            </div>
+
+            <div data-cart-item class="cart-item row">
+                <div class="col-md-6">
+                    <div class="thumbnail">
+                        <img src="http://placehold.it/350x350" alt="thumbnail">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4>Dish</h4>
+                    <h5>$24.99</h5>
+                    <button class="btn btn-warning" data-cart-remove>Remove</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div>
+        <footer class="page-footer font-small cyan darken-3">
+            <!-- Footer Elements -->
+            <div class="container">
+                <!-- Grid row-->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-12 py-5">
+                        <div class="mb-5 flex-center">
+                            <!-- Facebook -->
+                            <a class="fb-ic">
+                                <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                            <!-- Twitter -->
+                            <a class="tw-ic">
+                                <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                            <!-- Google +-->
+                            <a class="gplus-ic">
+                                <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                            <!--Linkedin -->
+                            <a class="li-ic">
+                                <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                            <!--Instagram-->
+                            <a class="ins-ic">
+                                <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                            <!--Pinterest-->
+                            <a class="pin-ic">
+                                <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row-->
+            </div>
+            <!-- Footer Elements -->
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2019 Copyright:
+                <a href="https://mdbootstrap.com/education/bootstrap/"> Team Monarch</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <style>
+        .no-corners {
+            border-radius: 0;
+        }
+
+        .cart {
+            transform: scale(0);
+            transform-origin: top right;
+            position: absolute;
+            display: inline-block;
+            top: 52px;
+            right: 50px;
+            width: 300px;
+            transition: transform 0.3s ease-out, height 0.3s linear;
+            overflow: hidden;
+
+            &.expanded {
+                transform: scale(1.0);
+                transition: transform 0.4s ease-in, height 0.4s linear;
+
+                .cart-item {
+                    transform: translateX(0);
+                    transition-delay: 0s;
+
+                    &.removing {
+                        transition-delay: 0s !important;
+                    }
+
+                    &:nth-child(1):not(.template) {
+                        transition-delay: 0.15s;
+                    }
+
+                    &:nth-child(2):not(.template) {
+                        transition-delay: 0.3s;
+                    }
+
+                    &:nth-child(3):not(.template) {
+                        transition-delay: 0.45s;
+                    }
+
+                    &:nth-child(4):not(.template) {
+                        transition-delay: 0.6s;
+                    }
+
+                    &:nth-child(5):not(.template) {
+                        transition-delay: 0.75s;
+                    }
+
+                    &:nth-child(6):not(.template) {
+                        transition-delay: 0.9s;
+                    }
+
+                    &:nth-child(7):not(.template) {
+                        transition-delay: 1.05s;
+                    }
+
+                }
+            }
+
+            .panel-heading h3 {
+                font-size: 18px;
+                margin: 0;
+            }
+
+            .cart-item {
+                clear: left;
+                opacity: 1;
+                display: inline-block;
+                transform: translateX(224px);
+                height: 130px;
+                transition: transform 0.3s ease-out,
+                    opacity 0.4s ease-out,
+                    height 0.3s linear;
+
+                &.template {
+                    display: none;
+                }
+
+                &.toggling {
+                    height: 0;
+                    transform: translateX(-300px);
+                    opacity: 0;
+                }
+            }
+
+
+        }
+
+        .navbar {
+            .navbar-brand {
+                img {
+                    max-height: 100%;
+                }
+            }
+        }
+    </style>
+
+    <script>
+        $(function () {
+            function updateTotals() {
+                var length = $('[data-cart] [data-cart-item]:not(.template)').length;
+                $('[data-cart-item-count]').html(length);
+            }
+
+            $('[data-cart-toggle]').on('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                $('[data-cart]').toggleClass('expanded');
+            });
+
+            $('[data-cart-products]').on('click', '[data-cart-add]', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                var $button = $(this);
+                var $template = $('.template[data-cart-item]').clone();
+                var $cart = $('[data-cart]');
+
+                var $itemImg = $button.closest('[data-cart-product]').find('[data-image]');
+                var $itemImgClone = $itemImg.clone();
+
+                if ($cart.hasClass('expanded')) {
+
+                    $itemImgClone
+                        .offset({ top: $itemImg.offset().top, left: $itemImg.offset().left })
+                        .css({ position: 'absolute', width: $itemImg.width(), height: $itemImg.height(), opacity: 0.75 })
+                        .appendTo($('body'))
+                        .animate({ width: $itemImg.width() / 2, height: $itemImg.height() / 2, left: $cart.offset().left - ($itemImg.width() / 2), top: $cart.offset().top, opacity: 0 }, function () {
+                            $itemImgClone.remove();
+                        });
+
+                } else {
+
+                    setTimeout(function () {
+
+                        $itemImgClone
+                            .offset({ top: $itemImg.offset().top, left: $itemImg.offset().left })
+                            .css({ position: 'absolute', width: $itemImg.width(), height: $itemImg.height(), opacity: 0.75 })
+                            .appendTo($('body'))
+                            .animate({ width: $itemImg.width() / 2, height: $itemImg.height() / 2, left: $cart.offset().left - ($itemImg.width() / 2), top: $cart.offset().top, opacity: 0 }, function () {
+                                $itemImgClone.remove();
+                            });
+
+                    }, 200);
+
+
+                }
+
+                $template.find('[data-cart-name]').html($button.data('cart-name'));
+                $template.find('[data-cart-price]').html($button.data('cart-price'));
+
+                $template.find('[data-cart-thumb]').attr('src', $button.data('cart-thumb'));
+
+                $template.removeClass('template').addClass('toggling');
+
+                $('[data-cart-items-container]').prepend($template);
+
+                if (!$cart.hasClass('expanded')) {
+                    $cart.one('transitionend webkitTransitionEnd oTransitionEnd', function () {
+                        $template.removeClass('toggling');
+                    });
+                    $cart.addClass('expanded');
+                } else {
+                    setTimeout(function () {
+                        $template.removeClass('toggling');
+                    }, 1);
+                }
+
+                updateTotals();
+
+                console.log($template);
+            });
+
+            $('[data-cart]').on('click', '[data-cart-remove]', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                var $button = $(this);
+                var $cartItem = $(this).closest('[data-cart-item]');
+                $cartItem.addClass('removing');
+
+                $cartItem.one('transitionend webkitTransitionEnd oTransitionEnd', function () {
+                    $cartItem.remove();
+                    updateTotals();
+                });
+
+                $cartItem.addClass('toggling');
+            });
+        });
+
+    </script>
 </body>
 
 </html>
