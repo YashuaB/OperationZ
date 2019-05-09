@@ -1,6 +1,10 @@
 /* Style the list */
 body{
+  font-size: 
+}
 
+#maincon{
+margin-left: 10%;
 }
 
 ul.breadcrumb {
@@ -11,7 +15,7 @@ ul.breadcrumb {
   /* Display list items side by side */
   ul.breadcrumb li {
     display: inline;
-    font-size: 13px;
+    font-size: 15px;
   }
   
   /* Add a slash symbol (/) before/behind each list item */
@@ -36,15 +40,19 @@ ul.breadcrumb {
     height: 400px;
     width: 400px; 
   }
-  .firelike{
+  /* .firelike{
     height: 40px;
     width: 40px;
     float: right;
     padding-right: 50%;
     display: inline;
-  }
-  .itemname{
+  } */
+  .cont1{
     float: right;
-    padding-right: 60%;
-
+    padding-right: 55%;
+  }
+  .cart{
+    float: right;
+    padding-right: 30%; 
+    width: 90px;
   }
