@@ -13,6 +13,12 @@ module.exports = function(sequelize, DataTypes){
       type: DataTypes.STRING,
       allowNull: false
     },
+     subCategory:{
+      type:DataTypes.STRING
+     },
+     subcategoryext:{
+      type:DataTypes.STRING
+     },
      image:{
        type: DataTypes.STRING,
        allowNull: false

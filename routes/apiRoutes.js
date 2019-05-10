@@ -2,7 +2,7 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Find all Authors and return them to the user with res.json
-  app.get("/api/product/:category?", function(req, res) {
+  app.get("/api/product/category/:category?", function(req, res) {
 
     if(req.params.category){
       db.Products.findAll({
@@ -17,6 +17,41 @@ module.exports = function(app) {
     });}
     
   });
+
+  app.get("/api/product/subcategory/:subcategory?", function(req, res) {
+
+    if(req.params.subcategory){
+      db.Products.findAll({
+        where: {
+          subcategory: req.params.subcategory
+        }
+      }).then(function(dbProducts) {
+        res.json(dbProducts);
+      });
+    }else{db.Products.findAll({}).then(function(dbProducts) {
+      res.json(dbProducts);
+    });}
+    
+  });
+
+  app.get("/api/product/subcategoryext/:subcategoryext?", function(req, res) {
+    if(req.params.subcategoryext){
+      db.Products.findAll({
+        where: {
+          subcategoryext: req.params.subcategoryext
+        }
+      }).then(function(dbProducts) {
+        res.json(dbProducts);
+      });
+    }else{db.Products.findAll({}).then(function(dbProducts) {
+      res.json(dbProducts);
+    });}
+    
+  });
+
+
+
+  
 //route to specifically get rating
   // app.get("/api/review/:rating", function(req, res) {
   //   // Find one Author with the id in req.params.id and return them to the user with res.json
