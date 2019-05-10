@@ -21,7 +21,7 @@ module.exports = function(app){
 app.get('/shopping-cart', function (req, res) {
     models.ProductCart.findAll({
         where: {
-            cartId: cart.id,
+            cartId: models.cart.id,
         },
         include: [{
             model: models.Products,
