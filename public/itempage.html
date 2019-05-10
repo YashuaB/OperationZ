@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Item Page</title>
+    <link rel="stylesheet" type="text/css" href="/Users/diop/Documents/OperationZ/public/css/itempages.css">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.slim.js"
+  integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  
+        <ul class="breadcrumb">
+                <li><a href="#">Weapons</a></li>
+                <li><a href="#">Camping Equipment</a></li>
+                <li><a href="#">Food</a></li>
+                <li><a href="#">Cloths</a></li>
+              </ul>
+<br>
+<br>
+<div id="maincon">
+
+
+ <img class="itempic" src="/Users/diop/Documents/OperationZ/public/images/itempage.jpg" alt="">
+
+ <div class="cont1">
+ <h2 class="itemname">Item Name:</h2>
+ <!-- <img class="firelike" src="/Users/diop/Documents/OperationZ/public/images/fire.png" alt=""> -->
+ <h3 class="itemprice">Item Price:</h3>
+ <br>
+ <br>
+ <form action="/action_page.php">
+  <span>Quantity</span>
+  <br>
+  <input type="number" name="Quantity" value="" min="1" max="100"><br>
+  <input type="reset">
+</form>
+<br>
+<br>
+<div class="cart">
+    <form action="/cart/add" method="POST">
+      <!-- <input name="quantity" type="hidden" value="1" />
+      <input name="product_id" type="hidden" value="" /> 
+      <input name="product_name" type="hidden" value="gun" />  -->
+      <button class="add-button" type="submit">Add to Cart!</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  
+$.post("/api/products", function (data) {
+  $("#itemname").text(data.name);
+  ("#itemprice").text(data.price);
+$("#itempic").attr("src", data.image);
+})
+
+</script>
+</div>
+   
+</body>
+</html>
+<!-- have an id tied to the item and use a get request to oull the needed info to the items page -->
