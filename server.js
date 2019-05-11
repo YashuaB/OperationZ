@@ -60,7 +60,7 @@ require("./routes/cartRoutes")(app)
 // require("./routes/users")(app);
 // require("./routes/checkoutRoutes")(app);
 // require("./routes/clearRoutes")(app);
-// require("./routes/htmlRoutes")(app);
+require("./routes/htmlRoutes")(app);
 
 
 db.sequelize.sync({ force: false }).then(function() {

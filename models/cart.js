@@ -1,4 +1,4 @@
-var Cart = (sequelize, DataTypes) => {
+module.exports = function(sequelize, DataTypes){
   
   var Cart = sequelize.define('Cart', {
       totalPrice: DataTypes.FLOAT,
@@ -9,4 +9,3 @@ var Cart = (sequelize, DataTypes) => {
   };
   return Cart;
 };
-module.exports = Cart;

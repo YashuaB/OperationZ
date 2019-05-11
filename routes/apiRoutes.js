@@ -49,9 +49,27 @@ module.exports = function(app) {
     
   });
 
+  app.get("/api/product/subcategoryextone/:subcategoryextone?", function(req, res) {
+    if(req.params.subcategoryextone){
+      db.Products.findOne({
+        where: {
+          subcategoryext: req.params.subcategoryextone
+        }
+      }).then(function(dbProducts) {
+        res.json(dbProducts);
+      });
+    }else{db.Products.findOne({
+      
+    }).then(function(dbProducts) {
+      res.json(dbProducts);
+    });}
+    
+  });
 
 
-  
+
+
+
 //route to specifically get rating
   // app.get("/api/review/:rating", function(req, res) {
   //   // Find one Author with the id in req.params.id and return them to the user with res.json
