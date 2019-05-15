@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
     <title>Sign Up Page</title>
 </head>
 
@@ -17,16 +18,16 @@
             <hr>
 
             <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
+            <input method="POST" action="/register" class="email" type="text" placeholder="Enter Email" name="email" required>
 
             <label for="username"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="username" required>
+            <input method="POST" action="/register" class="username" type="text" placeholder="Enter Username" name="username" required>
 
             <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-
-            <label for="psw-repeat"><b>Repeat Password</b></label>
-            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+            <input method="POST" action="/register" class="password" type="password" placeholder="Enter Password" name="psw" required>
+            <!-- not sure how to validate twice -->
+            <!-- <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input method="POST" action="/register" class="email" type="password" placeholder="Repeat Password" name="psw-repeat" required> -->
 
             <label>
                 <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
@@ -161,6 +162,29 @@
             display: table;
         }
     </style>
+
+
+
+<script>
+
+
+
+$(document).ready(function(){
+
+
+    $.post("/register", function(data){
+      
+        console.log("user created", data)
+    })
+
+})
+
+
+
+</script>
+
+
+
 </body>
 
 </html>

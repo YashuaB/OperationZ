@@ -18,10 +18,10 @@ module.exports = function(app){
 
 });
 
-app.get('/shopping-cart', function (req, res) {
+app.get('/shopping-cart/:cartId', function (req, res) {
     models.ProductCart.findAll({
         where: {
-            cartId: "models.cart.id",
+            cartId: req.params.cartId,
         },
         include: [{
             model: models.Products,
